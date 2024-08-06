@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_PropertySheetDisplayName>ClearView Properties</_PropertySheetDisplayName>
+    <CustomBuildAfterTargets>Link</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Teknic\ClearView\sdk\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Teknic\ClearView\sdk\lib\win\Release\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sFoundation20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy "C:\Program Files (x86)\Teknic\ClearView\sdk\lib\win\Release\$(Platform)\sFoundation20.dll" "$(OutDir)"</Command>
+      <Message>Copying DLL</Message>
+      <Outputs>$(OutDir)sFoundation20.dll</Outputs>
+      <Inputs>C:\Program Files (x86)\Teknic\ClearView\sdk\lib\win\Release\$(Platform)\sFoundation20.dll</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
