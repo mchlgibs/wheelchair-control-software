@@ -1,0 +1,52 @@
+Steps
+_ Load Arduino codes: MonitorSpeed and TorqueWithSpeedOutputTwoMotors
+_ Load/Open Example-Motion.VCXproj (file on Folder: HomingWithROllAndPich)
+_ Run Example-Motion.cpp
+  See output message:
+
+  Build started at 9:40 AM...
+1>------ Build started: Project: Example-Motion, Configuration: Debug x64 ------
+1>Example-Motion.cpp
+1>C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp(10,10): error C1083: Cannot open include file: 'pubSysCls.h': No such file or directory
+1>Done building project "Example-Motion.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 9:40 AM and took 02.098 seconds ==========
+
+When running "compile" see msg: 
+
+Severity	Code	Description	Project	File	Line	Suppression State	Details
+Error	C1083	Cannot open include file: 'pubSysCls.h': No such file or directory	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	10		
+Error (active)	E0020	identifier "comHubPorts" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	83		
+Error (active)	E0020	identifier "SysManager" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	88		
+Error (active)	E0020	identifier "myMgr" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	88		
+Error (active)	E0020	identifier "NET_CONTROLLER_MAX" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	99		
+Error (active)	E0020	identifier "IPort" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	117		
+Error (active)	E0020	identifier "myPort" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	117		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	129		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	129		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	164		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	164		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	192		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	192		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	231		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	231		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	259		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	259		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	288		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	288		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	323		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	323		
+Error (active)	E0020	identifier "INode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	351		
+Error (active)	E0020	identifier "theNode" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	351		
+Error (active)	E0020	identifier "mnErr" is undefined	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	375		
+Error (active)	E0135	namespace "std" has no member "vector"	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	83		
+Error (active)	E0254	type name is not allowed	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	83		
+Error (active)	E0276	name followed by '::' must be a class or namespace name	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	88		
+Error (active)	E0276	name followed by '::' must be a class or namespace name	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	96		
+Error (active)	E0276	name followed by '::' must be a class or namespace name	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	235		
+Error (active)	E0276	name followed by '::' must be a class or namespace name	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	236		
+Error (active)	E0725	name must be a namespace name	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	12		
+Error (active)	E1696	cannot open source file "pubSysCls.h"	Example-Motion	C:\Users\aptre\Desktop\Wheelchair_GMU_Prakash\HomingWithRollAndPitch\Example-Motion.cpp	10		
+
+
+

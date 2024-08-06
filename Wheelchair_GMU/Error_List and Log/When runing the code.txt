@@ -1,0 +1,65 @@
+There were build errors. Would you like to continue and run the last successful build? 
+I press Yes. 
+
+Motion Example starting. Press Enter to continue.
+Found Teknic SC4-HUB
+Friendly name: Teknic ClearPath 4-axis SC Hub (COM7)
+Port number COM7
+Found 1 SC Hubs
+ Port[0]: state=5, nodes=2
+   Node[0]: type=3
+            userID: Trainer Right Side
+        FW version: 1.7.7 6822
+          Serial #: 56700441
+             Model: CPM-SCSK-2311S-RLNA-1-7-D
+Node    0 enabled
+   Node[1]: type=3
+            userID: Trainer Left Side
+        FW version: 1.7.7 6822
+          Serial #: 56700431
+             Model: CPM-SCSK-2311S-RLNA-1-7-D
+Node    1 enabled
+Node [0] has not been homed.  Homing Node now...
+Node completed homing
+Node [1] has not been homed.  Homing Node now...
+Node completed homing
+All nodes successfully homed.
+Enter value for roll: -3
+Enter value for pitch: 5
+You entered roll: -3 degrees and pitch: 5 degrees.
+Calculated h1: 1.08016 inches.
+Calculated h2: 2.49323 inches.
+Calculated move1: -70210 counts.
+Calculated move2: -162059 counts.
+Moving Node     0
+1391.080172 estimated time.
+Node    0 Move Done
+Moving Node     1
+3104.958573 estimated time.
+Node    1 Move Done
+Desired roll and pitch achieved.
+All nodes successfully moved.
+Press Enter to home trainer device...
+
+   Node[0]: type=3
+            userID: Trainer Right Side
+        FW version: 1.7.7 6822
+          Serial #: 56700441
+             Model: CPM-SCSK-2311S-RLNA-1-7-D
+Node    0 enabled
+   Node[1]: type=3
+            userID: Trainer Left Side
+        FW version: 1.7.7 6822
+          Serial #: 56700431
+             Model: CPM-SCSK-2311S-RLNA-1-7-D
+Node    1 enabled
+Node 0 has already been homed, current position is:       -70210
+Rehoming Node...
+Node completed homing
+Node 1 has already been homed, current position is:      -162059
+Rehoming Node...
+Node completed homing
+All nodes successfully homed.
+Disabling nodes, and closing port
+Press any key to continue.
+
