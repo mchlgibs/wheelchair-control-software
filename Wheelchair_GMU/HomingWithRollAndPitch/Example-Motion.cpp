@@ -14,7 +14,7 @@ using namespace sFnd;
 // Send message and wait for newline
 void msgUser(const char *msg) {
 	std::cout << msg;
-	getchar();
+	(void)getchar();
 }
 
 // Constants for the distances from fulcrum to pivot
@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 {
 	msgUser("Motion Example starting. Press Enter to continue.");
 
-size_t portCount = 0;
+	size_t portCount = 0;
 	std::vector<std::string> comHubPorts;
 
 
@@ -94,7 +94,7 @@ size_t portCount = 0;
 	{ 
 		
 		SysManager::FindComHubPorts(comHubPorts);
-		printf("Found %d SC Hubs\n", comHubPorts.size());
+		printf("Found %zd SC Hubs\n", comHubPorts.size());
 
 		for (portCount = 0; portCount < comHubPorts.size() && portCount < NET_CONTROLLER_MAX; portCount++) {
 			
@@ -153,7 +153,7 @@ size_t portCount = 0;
 				//This will loop checking on the Real time values of the node's Ready status
 				while (!theNode.Motion.IsReady()) {
 					if (myMgr->TimeStampMsec() > timeout) {
-						printf("Error: Timed out waiting for Node %d to enable\n", iNode);
+						printf("Error: Timed out waiting for Node %zd to enable\n", iNode);
 						msgUser("Press any key to continue."); //pause so the user can see the error message; waits for user to press a key
 						return -2;
 					}
@@ -168,12 +168,12 @@ size_t portCount = 0;
 				{
 					if (theNode.Motion.Homing.WasHomed())
 					{
-						printf("Node %d has already been homed, current position is: \t%8.0f \n", iNode, theNode.Motion.PosnMeasured.Value());
+						printf("Node %zd has already been homed, current position is: \t%8.0f \n", iNode, theNode.Motion.PosnMeasured.Value());
 						printf("Rehoming Node... \n");
 					}
 					else
 					{
-						printf("Node [%d] has not been homed.  Homing Node now...\n", iNode);
+						printf("Node [%zd] has not been homed.  Homing Node now...\n", iNode);
 					}
 					//Now we will home the Node
 					theNode.Motion.Homing.Initiate();
@@ -181,7 +181,7 @@ size_t portCount = 0;
 					printf("Node completed homing\n");
 				}
 				else {
-					printf("Node[%d] has not had homing setup through ClearView.  The node will not be homed.\n", iNode);
+					printf("Node[%zd] has not had homing setup through ClearView.  The node will not be homed.\n", iNode);
 				}
 			}
 			// Monitor all nodes for completion of homing
@@ -217,8 +217,8 @@ size_t portCount = 0;
 				double h2 = A * sin(p) - B * sin(r);
 
 				// Calculate the distance in counts for the heights
-				int move1 = h1 * -65000;
-				int move2 = h2 * -65000;
+				int move1 = int(h1 * -65000); // TODO: check integer conversion
+				int move2 = int(h2 * -65000);
 
 				std::cout << "You entered roll: " << rollDegrees << " degrees and pitch: " << pitchDegrees << " degrees." << std::endl;
 				std::cout << "Calculated h1: " << h1 << " inches." << std::endl;
@@ -312,7 +312,7 @@ size_t portCount = 0;
 				//This will loop checking on the Real time values of the node's Ready status
 				while (!theNode.Motion.IsReady()) {
 					if (myMgr->TimeStampMsec() > timeout) {
-						printf("Error: Timed out waiting for Node %d to enable\n", iNode);
+						printf("Error: Timed out waiting for Node %zd to enable\n", iNode);
 						msgUser("Press any key to continue."); //pause so the user can see the error message; waits for user to press a key
 						return -2;
 					}
@@ -327,12 +327,12 @@ size_t portCount = 0;
 				{
 					if (theNode.Motion.Homing.WasHomed())
 					{
-						printf("Node %d has already been homed, current position is: \t%8.0f \n", iNode, theNode.Motion.PosnMeasured.Value());
+						printf("Node %zd has already been homed, current position is: \t%8.0f \n", iNode, theNode.Motion.PosnMeasured.Value());
 						printf("Rehoming Node... \n");
 					}
 					else
 					{
-						printf("Node [%d] has not been homed.  Homing Node now...\n", iNode);
+						printf("Node [%zd] has not been homed.  Homing Node now...\n", iNode);
 					}
 					//Now we will home the Node
 					theNode.Motion.Homing.Initiate();
@@ -340,7 +340,7 @@ size_t portCount = 0;
 					printf("Node completed homing\n");
 				}
 				else {
-					printf("Node[%d] has not had homing setup through ClearView.  The node will not be homed.\n", iNode);
+					printf("Node[%zd] has not had homing setup through ClearView.  The node will not be homed.\n", iNode);
 				}
 			}
 			// Monitor all nodes for completion of homing
